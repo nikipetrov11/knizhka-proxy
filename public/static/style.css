@@ -223,3 +223,21 @@ nav.main>a.btn.red:hover svg{transform:translateX(3px)}
 .bar{height:54px}nav.main>a.btn{height:40px;padding:0 16px;font-size:.9rem}nav.main>a.btn.ghost{padding:0 12px}nav.main>a.btn.red svg{display:none}
 }
 @media(max-width:640px){nav.main>a.btn span{display:inline}}
+
+/* --- История на обслужването: форма и записи (без дата) --- */
+.fgrid select{-webkit-appearance:none;appearance:none;padding-right:40px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23a1a1aa' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+@media(max-width:640px){
+.fgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.fgrid .kind,.fgrid .full{grid-column:1/-1}
+.fgrid input,.fgrid select,.fgrid textarea{min-height:48px;font-size:16px}
+.fgrid .btn{width:100%;padding:14px}
+table.hist td{grid-area:auto;justify-self:auto;margin:0;padding:0;border:0;font-weight:400;font-size:1rem;color:inherit}
+table.hist td::before{content:none}
+table.hist td:nth-child(1){grid-area:1/1;font-weight:700;font-size:1.05rem}
+table.hist td:nth-child(5){grid-area:1/2;justify-self:end}
+table.hist td:nth-child(2){grid-area:2/1;color:var(--mute);font-size:.9rem}
+table.hist td:nth-child(2)::before{content:"Пробег: "}
+table.hist td:nth-child(3){grid-area:2/2;justify-self:end;font-weight:700;font-size:1.05rem}
+table.hist td:nth-child(4){grid-area:3/1/4/3;margin-top:6px;padding-top:8px;border-top:1px solid var(--line);color:#d4d4d8;font-size:.92rem}
+table.hist td:nth-child(4):empty{display:none}
+}
